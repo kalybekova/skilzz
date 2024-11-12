@@ -1,9 +1,13 @@
-import Home from "./HomeSection/Home";
+import FirstSection from "./firstSection/FirstSection";
+import SecondSection from "./secondSection/SecondSection";
+import ThirdSection from "./thirdSection/ThirdSection";
 
 const HomePage = () => {
   return (
     <>
-      <Home />
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
     </>
   );
 };

@@ -1,7 +1,11 @@
-import { BaseQueryFn, createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import {
+  BaseQueryFn,
+  createApi,
+  fetchBaseQuery,
+} from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "",
+  baseUrl: `${process.env.NEXT_PUBLIC_API}/api`,
 });
 
 const baseQueryExtended: BaseQueryFn = async (args, api, extraOptions) => {

@@ -1,6 +1,15 @@
 import { api as index } from "..";
 
 const api = index.injectEndpoints({
-  endpoints: (build) => ({}),
+  endpoints: (build) => ({
+    getCourses: build.query<SKILLZ.getCoursesRes, SKILLZ.getCoursesReq>({
+      query: () => ({
+        url: "/courses/",
+        method: "GET",
+      }),
+      providesTags: ["skillz"],
+    }),
+  }),
 });
-export const {} = api;
+
+export const { useGetCoursesQuery } = api;
