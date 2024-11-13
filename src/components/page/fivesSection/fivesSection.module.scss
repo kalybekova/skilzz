@@ -1,0 +1,33 @@
+.FivesSection {
+  background: #57d9a6;
+  padding: 50px 0;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    p {
+      font-family: Source Sans Pro;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 42px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #1c1c33;
+    }
+    h6 {
+      font-family: Source Sans Pro;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #4e4e65;
+    }
+  }
+}

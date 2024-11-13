@@ -9,7 +9,35 @@ const api = index.injectEndpoints({
       }),
       providesTags: ["skillz"],
     }),
+
+    getCoursesById: build.query<
+      SKILLZ.getCoursesByIdRes,
+      SKILLZ.getCoursesByIdReq
+    >({
+      query: (id) => ({
+        url: `/courses/${id}/`,
+        method: "GET",
+      }),
+      providesTags: ["skillz"],
+    }),
+
+    getWorkShops: build.query<SKILLZ.getWorkShopRes, SKILLZ.getWorkShopReq>({
+      query: () => ({
+        url: "/freeworkshops/",
+        method: "GET",
+      }),
+      providesTags: ["skillz"],
+    }),
+
+    getArticles: build.query<SKILLZ.getArticlesRes, SKILLZ.getArticlesReq>({
+      query: () => ({
+        url: "/articles/",
+        method: "GET",
+      }),
+      providesTags: ["skillz"],
+    }),
   }),
 });
 
-export const { useGetCoursesQuery } = api;
+export const { useGetCoursesQuery, useGetWorkShopsQuery, useGetArticlesQuery ,useGetCoursesByIdQuery} =
+  api;

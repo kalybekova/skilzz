@@ -1,12 +1,9 @@
 "use client";
-import { useGetCoursesByIdQuery, useGetCoursesQuery } from "@/redux/api/skillz";
-import scss from "./secondSection.module.scss";
-import { useParams } from "next/navigation";
+import { useGetArticlesQuery } from "@/redux/api/skillz";
+import scss from "./SevensSection.module.scss";
 
-const SecondSection = () => {
-  const { data } = useGetCoursesQuery();
-  console.log("🚀 ~ SecondSection ~ data:", data);
-
+const SevensSection = () => {
+  const { data } = useGetArticlesQuery();
   return (
     <section className={scss.SecondSection}>
       <div className="container">
@@ -25,10 +22,10 @@ const SecondSection = () => {
             {data?.map((el, id) => (
               <div key={id} className={scss.card}>
                 <img src={el.image} alt="photo" />
+
+                <h3>{el.created_date}</h3>
                 <h2>{el.name}</h2>
                 <h3>{el.author}</h3>
-                <h2>${el.price}USD</h2>
-                <button>Learn More</button>
               </div>
             ))}
           </div>
@@ -38,4 +35,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default SevensSection;

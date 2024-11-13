@@ -1,0 +1,127 @@
+.SecondSection {
+  padding: 100px 0;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    .firstBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+
+      h3 {
+        font-family: Source Sans Pro;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 52.8px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        border-bottom: 2px solid #57d9a6;
+      }
+
+      p {
+        font-family: Source Sans Pro;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        width: 700px;
+      }
+      button {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding: 16px 24px;
+        color: #1c1c33;
+        background: #57d9a6;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .secondBlock {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+
+      .card {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 15px;
+        width: 390px;
+        height: 370px;
+        background: white;
+        color: black;
+
+        h2 {
+          margin: 0 15px;
+          font-family: Source Sans Pro;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+        h3 {
+          font-family: Source Sans Pro;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 27px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          margin: 0 15px;
+        }
+
+        img {
+          height: 180px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .SecondSection {
+    padding: 50px 0;
+    .content {
+      .firstBlock {
+        h3 {
+          font-size: 25px;
+        }
+        p {
+          text-align: center;
+          font-size: 15px;
+          width: 100%;
+          line-height: 22px;
+        }
+      }
+      .secondBlock {
+        flex-direction: column;
+        gap: 15px;
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
