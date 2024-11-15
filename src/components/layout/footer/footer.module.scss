@@ -1,16 +1,6 @@
 .Footer {
-  background-color: #0a0a23;
   color: #fff;
   padding: 2rem 0;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .newsletter {
     background-color: #2ee59d;
@@ -19,7 +9,7 @@
     border-radius: 8px;
     color: #0a0a23;
     width: 100%;
-    max-width: 1400px;
+    // max-width: 1400px;
     margin-bottom: 2rem;
 
     h3 {
@@ -114,5 +104,19 @@
     color: #777;
     padding: 1rem 0;
     border-top: 1px solid #333;
+  }
+}
+
+@media (max-width: 450px) {
+  .Footer {
+    .newsletter {
+      form {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    .footer_content {
+      flex-direction: column;
+    }
   }
 }
